@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <title>Motion Retargeting in 2D</title>
+  <style type="text/css">
+    body {
+      margin: 0px;
+      background-color: #F3F3F3;
+      font-family: 'PT Sans', 'Arial';
+    }
+
+    h1 {
+      text-align: center;
+      color: #444444;
+      font-size: 36px;
+      margin-top:15px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      margin-top: 120px;
+      margin-bottom: 10px;
+      color: #FFCF43;
+      font-size: 30px;
+    }
+
+    #headerdiv {
+      width: 1150px;
+      margin: auto;
+    }
+    #maincontent {
+      width: 1000px;
+      margin: auto;
+      height: 440px;
+    }
+
+    #suppcontent {
+      padding-top: 0px;
+      background-color: black;
+      color: #BBBBBB;
+      font-size: 16px;
+    }
+
+    #content {
+      width: 1000px;
+      margin: auto;
+    }
+    td {
+      vertical-align: top;
+      text-align: center;
+    }
+    .desc {
+      color: #888888;
+    }
+    .center {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .logo-universities {
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 68px;
+      margin-bottom: 0px;
+    }
+    .logo {
+      /* float: left; */
+      margin-top: 20px;
+      margin-left: 68px;
+      margin-bottom: 0px;
+      display: inline
+    }
+    .universities {
+      /* float: right; */
+      margin-top: 20px;
+      margin-left: 68px;
+      margin-bottom: 0px;
+      display: inline
+    }
+    .siggraph-title {
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .siggraph {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 28px;
+      padding-bottom: 20px;
+      margin-bottom: 0px;
+    }
+    .siggraph a {
+      color: #777777;
+    }
+    .google {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .google a {
+      color: #204c87;
+    }
+    .center {
+      text-align: center;
+    }
+    .authors {
+      text-align: center;
+    }
+    .author {
+      margin-right: 58px;
+      font-size: 21px;
+    }
+    .author a {
+      color: #3376cb;
+    }
+    #abstract {
+      line-height: 1.3;
+      width: 1000px;
+      font-size: 16px;
+    }
+    h2 {
+      color: #666666;
+      margin-top: 70px;
+    }
+
+
+    h1.supp {
+      padding-top: 40px;
+      margin-top: 0;
+      color:#aaaaaa;
+      font-size:40px;
+      margin-bottom: 20px;
+    }
+    h2.abstract {
+      color: #555555;
+      margin-top: 0px;
+    }
+
+    #files {
+      color: #555555;
+      margin-top: 20px;
+      font-size: 25px;
+    }
+
+    #files a {
+      text-decoration: None;
+      color: #3376cb;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-universities">
+    <div class="logo">
+      <img src="./images/SIGG_logo.png" width=180>
+    </div>
+    <div class="universities">
+      <img src="./images/universities.png" width=180>
+    </div>
+  </div>
+
+  <div id="headerdiv">
+  <h1>
+Learning Character-Agnostic Motion for Motion Retargeting in 2D
+  </h1>
+
+  <!-- <div class="siggraph"><a href="https://s2019.siggraph.org/">SIGGRAPH 2019</a></div>
+</div> -->
+  <div id="maincontent">
+  <div class="authors">
+  <span class="author"> <a href="https://kfiraberman.github.io/">Kfir Aberman</a><sup>1,2</sup></span>
+  <span class="author"> <a href="https://chriswu1997.github.io/">Rundi Wu</a><sup>3</sup></span>
+  <span class="author"> <a href="http://www.cs.huji.ac.il/~danix/">Dani Lischinski</a><sup>4</sup></span>
+  <span class="author"> <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a><sup>3</sup></span>
+  <span class="author"> <a href="https://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a><sup>2</sup></span>
+  </div>
+
+  <div class="google">
+    <sup>1</sup><a href="http://fve.bfa.edu.cn/">Beijing Film Academy,        </a>
+    <sup> 2</sup><a href="https://english.tau.ac.il/">Tel-Aviv University,   </a>
+    <sup> 3</sup><a href="https://english.pku.edu.cn/">Peking University,   </a>
+    <sup> 4</sup><a href="http://new.huji.ac.il/en">Hebrew University</a>
+  </div>
+
+  <div id="abstract">
+    <h2 class="abstract"> Abstract </h2>
+    Analyzing human motion is a challenging task with a wide variety of applications in computer vision and in graphics.
+One such application, of particular importance in computer animation, is the retargeting of motion from one performer to another.
+While humans move in three dimensions, the vast majority of human motions are captured using video, requiring 2D-to-3D pose and camera recovery, before existing retargeting approaches may be applied.
+In this paper, we present a new method for retargeting video-captured motion between different human performers, without the need to explicitly reconstruct 3D poses and/or camera parameters.
+
+In order to achieve our goal, we learn to extract, directly from a video, a high-level latent motion representation, which is invariant to the skeleton geometry and the camera view. Our key idea is to train a deep neural network to decompose temporal sequences of 2D poses into three components: motion, skeleton, and camera view-angle.
+Having extracted such a representation, we are able to re-combine motion with novel skeletons and camera views, and decode a retargeted temporal sequence, which we compare to a ground truth from a synthetic dataset.
+
+We demonstrate that our framework can be used to robustly extract human motion from videos, bypassing 3D reconstruction, and outperforming existing retargeting methods, when applied to videos in-the-wild. It also enables additional applications, such as performance cloning, video-driven cartoons, and motion retrieval.
+  <div id="files" class="center" style="margin-top: 10px">
+      [ <a href="https://arxiv.org/pdf/xxx">Paper</a> ]&nbsp;&nbsp;&nbsp;&nbsp;
+      [ <a href="https://youtube.com/xxx">Video</a> ]&nbsp;&nbsp;&nbsp;&nbsp;
+      [ <a href="https://youtube.com/xxx">Code</a> ]
+    </div>
+  </div>
+</div>
+<div id="suppcontent">
+  <div style="height: 20px; background-color: #414141;"></div>
+  <div id="content">
+    <!--<h1 class="supp">3D Keypoints</h1>-->
+  <h2 style="margin-top: 30px;">Motion Retargeting in 2D</h2>
+Our approach is to extract an abstract, character- and camera-agnostic, latent representation of human motion directly from ordinary video. The extracted motion may then be applied to
+other, possibly very different, skeletons, and/or shown from new viewpoints, which can be extracted as well from other videos.<br/>
+  <span class="center"><img src="images/3_sources_decomposition.gif"></span>
+  <h2 style="margin-top: 30px;">Decomposing and Re-composing</h2>
+We train a deep neural network to decompose 2D projections of synthetic 3D data into three latent spaces: motion, skeleton and camera view-angle, which are then shuffled and
+re-composed to form new combinations.<br/>
+  <span class="center"><img src="images/recompose.gif"></span>
+  <h2 style="margin-top: 30px;">Skeleton and View-Angle Retargeting</h2>
+  Retargeting of similar motion to various skeletons (left) and different view-angles (right), without the need for 3D reconstruction.<br/>
+  <span class="center"><img src="images/results_combined.gif"></span>
+  <h2 style="margin-top: 30px;">Interpolation</h2>
+Interpolation of view-angle (horizontal axis) and motion (vertical axis).<br/>
+  <span class="center"><img src="images/interpolation.gif"></span>
+  <h2 style="margin-top: 30px;">Video Performance Cloning</h2>
+The ability to perform motion retargeting in 2D enables one to use a video-captured performance to drive a novel 2D skeleton, with
+possibly different proportions. This is done by using recent performance cloning techniques that propose a deep
+generative networks to produce frames that contain the appearance of a target actor reenacting the motion of a driving actor.<br/>
+  <span class="center"><img src="images/performance_cloning_skeleton.gif"></span>
+  <h2 style="margin-top: 30px;">Motion Retrival</h2>
+Using our motion representation, we can search in a dataset of videos in-the-wild for motions similar to one in a video given as a query, with the search being agnostic to the body proportions of
+the individual and the camera view angle. <br/>
+  <span class="center"><img src="images/retrival.gif"></span>
+  <br><br>
+</div>
+</div>
+</body>
+</html>
